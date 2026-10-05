@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>HidProbe</AssemblyName>
+    <RootNamespace>IPhoneMirror.HidProbe</RootNamespace>
+    <Version>0.1.0</Version>
+    <!-- Lets the project also build on non-Windows hosts (compile check only). -->
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+  </PropertyGroup>
+
+  <!--
+    The build output folder doubles as a "loose" MSIX layout: AppxManifest.xml and
+    the logo assets are copied next to HidProbe.exe so that scripts\Build-HidProbe.ps1
+    can register it with Add-AppxPackage -Register. Package identity is required for
+    the Windows BLE GATT server to actually publish services.
+  -->
+  <ItemGroup>
+    <Content Include="Package\AppxManifest.xml" Link="AppxManifest.xml" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Package\Assets\*.png" Link="Assets\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>
