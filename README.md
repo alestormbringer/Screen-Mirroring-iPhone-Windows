@@ -7,6 +7,7 @@ mouse/tastiera BLE** (HID over GATT). Niente cloud, niente telemetria.
 **Stato: Fase 0, verifica di fattibilità.** L'unica domanda a cui rispondere ora è:
 *l'iPhone accetta il PC come mouse/tastiera Bluetooth LE?*
 
+📄 **Brief del progetto:** [`docs/brief.md`](docs/brief.md) ·
 ➡️ **Guida ai test:** [`docs/fase0-guida-test.md`](docs/fase0-guida-test.md) ·
 **Scheda risultati:** [`docs/fase0-risultati.md`](docs/fase0-risultati.md)
 
@@ -100,3 +101,8 @@ in caso di crash e al successivo avvio.
 - [VirtualBT](https://github.com/taowen/BluetoothDemo) — emulatore tastiera/mouse BLE HID per Windows (solo riferimento, vedi sopra)
 - [Microsoft BluetoothLEExplorer](https://github.com/microsoft/BluetoothLEExplorer) — esempio ufficiale di server GATT
 - [UxPlay](https://github.com/FDH2/UxPlay) e [AirPlay-Windows](https://github.com/Thomas-lab17/AirPlay-Windows) — ricevitore AirPlay
+
+## Licenza
+
+[MIT](LICENSE). Nota: UxPlay/AirPlay-Windows sono GPLv3 e oggi vengono solo eseguiti come programma separato;
+se in futuro se ne incorporasse il codice, quella parte dovrebbe restare sotto GPLv3.
